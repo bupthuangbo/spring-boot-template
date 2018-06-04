@@ -6,7 +6,15 @@
 <head>  
 <meta charset="UTF-8">  
 <title>上传图片</title>  
-</head>   
+</head>
+<style>
+#box {
+max-height: 18%;
+max-width: 18%;
+}
+
+</style>
+
 <body>   
     <form action="upload/image" method="post" enctype="multipart/form-data"  target="nm_iframe">
         <input type="file" name="file">  
@@ -17,10 +25,11 @@
     <div>
         <%for ( index = 0; index < num; index++){ 
              Object tmp = list.get(index);
-             out.println("<img src='" + tmp + "' width='20%' height='20%'>");
+             out.println("<img id='box' src='" + tmp + "'>");
         }%>
     </div>
     
 
 </body>
+    
 </html>
