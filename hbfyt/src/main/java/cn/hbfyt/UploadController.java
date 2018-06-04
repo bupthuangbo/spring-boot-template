@@ -25,7 +25,7 @@ public class UploadController {
 
                 // 这里将上传得到的文件保存至 d:\\temp\\file 目录
                 FileUtils.copyInputStreamToFile(file.getInputStream(), new File(
-                        "src/main/webapp/upload/imgs/" + System.currentTimeMillis() + file.getOriginalFilename()));
+                        "src/main/webapp/upload/imgs/" + file.getOriginalFilename()));
             } catch (IOException e) {
                 e.printStackTrace();
             }
