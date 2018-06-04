@@ -27,6 +27,9 @@ public class DisplayController {
         ArrayList<String> fileList = new ArrayList<String>();
         File root = new File(filePath);
         File[] files = root.listFiles();
+        if (files == null || files.length == 0) {
+            return fileList;
+        }
         for (File file : files) {
             String picPathStr = "/upload/imgs/" + file.getName();
             System.out.println(picPathStr);
